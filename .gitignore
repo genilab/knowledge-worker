@@ -4,7 +4,7 @@ temp/
 # Running-environment content: retain locally unless an explicit knowledge
 # publication is requested through the GitHub workflow.
 knowledge/*
-!knowledge/INFO.md
+!knowledge/INDEX.md
 .env
 .env.*
 !.env.example
