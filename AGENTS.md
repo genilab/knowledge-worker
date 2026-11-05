@@ -4,7 +4,7 @@
 PROJECT_ROLE=core
 CORE_REPOSITORY_URL=https://github.com/genilab/knowledge-worker.git
 LOCAL_REPOSITORY_URL=https://github.com/genilab/knowledge-worker.git
-CORE_VERSION=v0.1.6
+CORE_VERSION=v0.1.8
 ```
 
 This workspace is the `Knowledge-worker` base project. It holds the shared
