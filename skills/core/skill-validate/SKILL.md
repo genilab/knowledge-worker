@@ -24,13 +24,11 @@ Primary agent role: skill-agent.
    skill and that the required records exist; ask for clarification when the
    intended target or missing evidence is ambiguous.
 2. Run Codex's bundled `quick_validate.py` for the selected skill or catalog,
-   then perform the documented Knowledge-worker structural checks. Do not run
-   deprecated validation code retained in migration storage.
+   then perform the documented Knowledge-worker structural checks.
 3. Check the authoritative [minimal skill format](../skill-create/docs/skill_format.md),
    including exactly one primary agent-role declaration in each Scope, plan
    requirements, source documentation, and executable test units where code is
-   delegated. Reconcile any legacy layout assumptions before relying on copied
-   validation code.
+   delegated.
 4. Confirm that project-root `INDEX.md` and `skills/INDEX.md` are absent, and
    each `skills/{core,local}/INDEX.md` contains its scoped `Skill`, `Action`,
    `Status`, `Plan`, and `QA` table.

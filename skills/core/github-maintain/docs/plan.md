@@ -18,6 +18,12 @@ For Knowledge-worker normal commits, it applies the declared README profile
 and excludes local knowledge content. Only `GitHub commit knowledge` reconciles and
 previews the knowledge catalog before it is included.
 
+Every project uses its candidate-current `DELIVERY.md` as the required HITL
+release gate: applicable requirements and Agent Verification must be `PASSED`
+and the user must have explicitly approved HITL Verification. TeamK summarizes
+that gate when it manages the project; independently used core-project copies
+retain the same portable project-local process.
+
 ## Script Requirements
 
 - It must accept `GitHub connect {repository-url}`, `GitHub commit`, `GitHub
@@ -37,6 +43,11 @@ previews the knowledge catalog before it is included.
   from its core repository before publication.
 - It must stop when no matching GitHub `origin` is attached and direct the user
   to create a GitHub repository, then use `GitHub connect {repository-url}`.
+- It must stop when the candidate-current Delivery Record is absent, any
+  applicable requirement or Agent Verification is not `PASSED`, or HITL
+  Verification is not explicitly approved; it must direct the user to
+  `Manage delivery for {project}` or `Verify all for {project}` rather than
+  publishing.
 - It must never initialize Git or create a GitHub repository. Only the explicit
   connect action may add or replace an origin.
 - It must generate a concise factual commit message from the changed files.
@@ -59,9 +70,8 @@ previews the knowledge catalog before it is included.
 
 ## Delegation to Code
 
-No code is delegated in this first Knowledge-worker migration. The unified
-workflow must be validated before deterministic command automation is
-introduced.
+No code is delegated in this instruction-only workflow. Deterministic command
+automation requires a separately approved implementation and validation plan.
 
 ## Code Requirements
 

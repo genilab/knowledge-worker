@@ -30,4 +30,3 @@ Primary agent role: information-agent.
 - This is read-only.
 - Do not create a root `INDEX.md` or substitute a local index for the project
   guide.
-- Do not treat temporary migration records as durable Knowledge-worker indexes.

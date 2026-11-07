@@ -31,9 +31,7 @@ Primary agent role: skill-agent.
    under `skills/local/`. Never add a local skill to the core catalog.
 4. Create only the target package folders required by the plan, its pending QA
    record, and one scoped catalog entry that follows the five-column format
-   in [the index-format standard](../index-maintain/docs/index_format.md). The
-   copied scaffold script is migration material until it is reconciled to the
-   `skills/` layout.
+   in [the index-format standard](../index-maintain/docs/index_format.md).
 5. Create or revise the target `SKILL.md` in the minimal format. State when to use it, its primary agent role, what it receives, what it produces, its decision or escalation conditions, handoffs, and its boundaries. Cover every Script Requirement; implement and test only the deterministic work stated in Delegation to Code and Code Requirements.
 6. Apply `code-document` and its [source-code standard](../code-document/docs/source_code_standard.md) to every target code and test file: factual header, retained license, `AI instruction:` context block, readable structure, public docstrings, and purposeful comments. Then use `skill-validate` to regenerate `docs/qa.md` from actual checks and `index-maintain` to refresh the catalog in its approved format.
 

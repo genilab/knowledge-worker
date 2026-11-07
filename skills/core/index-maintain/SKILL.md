@@ -33,9 +33,7 @@ Primary agent role: information-agent.
    the package's `metadata.action` value and derive status, plan, and QA links
    from its managed package. Report missing evidence as `PENDING`, rather than
    inferring a result.
-5. Produce the refreshed local index. Deprecated implementation material is
-   retained only under `temp/migration/` and must not be used to overwrite the
-   approved formats.
+5. Produce the refreshed local index from the current approved formats.
 
 ## Constraints
 

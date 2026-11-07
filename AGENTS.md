@@ -4,16 +4,19 @@
 PROJECT_ROLE=core
 CORE_REPOSITORY_URL=https://github.com/genilab/knowledge-worker.git
 LOCAL_REPOSITORY_URL=https://github.com/genilab/knowledge-worker.git
-CORE_VERSION=v0.1.8
+CORE_VERSION=v0.1.9
 ```
 
 This workspace is the `Knowledge-worker` base project. It holds the shared
 skills and topic-based knowledge structure used by other agent-worker
-projects. Temporary migration evidence belongs only in `temp/`.
+projects.
 
 ## Navigation
 
 - Start at [README.md](README.md).
+- Use [DELIVERY.md](DELIVERY.md) as the current objective-to-release lifecycle
+  record. Agent evidence and HITL decisions must be recorded there; release
+  status is never inferred from a prior version.
 - Read an invoked skill completely before using or changing it.
 - Use [skills/core/INDEX.md](skills/core/INDEX.md) for update-managed core
   skills and [skills/local/INDEX.md](skills/local/INDEX.md) for local-project
@@ -53,12 +56,16 @@ skill workflow → evidence → orchestrator**. The orchestrator may route a
 confirmed handoff to another listed role; unclear requirements, conflicts, and
 approval-gated work return to the user. These roles are capability nodes in
 the project graph, not a claim that persistent external agents are already
-running. See the transferable [graph-based multi-agent project model](skills/project-structure-manage/docs/multiagent_project_model.md).
+running. See the transferable [graph-based multi-agent project model](skills/core/project-structure-manage/docs/multiagent_project_model.md).
 
-## Index actions
+## Knowledge actions
 
 - `Show knowledge [ALL | {topic}]` presents the knowledge-base dashboard or a
   confirmed topic dashboard through [index-show](skills/core/index-show/SKILL.md).
+- `Create topic {topic}` creates one structured knowledge topic through
+  [topic-create](skills/core/topic-create/SKILL.md).
+- `Learn info about {topic}` records attributable supplied material through
+  [info-learn](skills/core/info-learn/SKILL.md).
 
 ## Update action
 
@@ -106,8 +113,6 @@ running. See the transferable [graph-based multi-agent project model](skills/pro
   also excluded from a default commit.
 - `.env`, `.local/`, `local/`, `runtime/`, and `*.local` are local
   environment material and must never be staged by the GitHub workflow.
-- `temp/` contains migration-only material and will be deleted after migration
-  acceptance.
 - The root `README.md` is the project-level guide. Root `INDEX.md` is not used.
   Local INDEX documents provide area navigation only.
 - Local INDEX documents must follow the approved formats in [the index-format
@@ -125,7 +130,6 @@ ideas record.
 
 - Shared changes require a documented transfer decision; project-specific work
   remains in its owning project.
-- Do not retain migration records outside `temp/`.
 - Maintain the root `README.md` according to the repository-publication
   declaration below.
 
@@ -170,3 +174,9 @@ bump.
 local project. GitHub synchronization is manual only. No action connects,
 commits, pushes, pulls, or creates a repository unless the user explicitly
 requests that action.
+
+Before publication, a current `DELIVERY.md` for the requested release candidate
+is required: all applicable requirements and Agent Verification must be
+`PASSED`, and the user must have explicitly approved its HITL Verification.
+TeamK summarizes this gate when it manages the project. This gate does not
+replace the explicit `GitHub commit` request or its publication preflight.

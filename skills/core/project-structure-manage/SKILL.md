@@ -58,7 +58,6 @@ Primary agent role: structure-agent.
 - Do not invent persistent external agents. Record agent roles as capability
   nodes and require user confirmation before an external agent is deployed or
   given a new authority.
-- Keep migration material only under the target project's `temp/` directory.
 - Keep durable project-produced assets under `assets/`; use `assets/images/`
   for infographics and `assets/reports/` for generated reports.
 - Assign asset classification and retention to an `asset-agent`; reference an

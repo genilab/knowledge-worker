@@ -36,8 +36,6 @@ navigation without overwriting material.
   target structure exists.
 - It must preserve unexpected or conflicting material and report it rather
   than deleting or overwriting it.
-- It must distinguish permanent project structure from temporary migration
-  material.
 - It must ask whether the project adopts the shared GitHub/version-control
   package and, when selected, transfer its skill package into `skills/core/`,
   its core catalog row, AGENTS
